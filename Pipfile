@@ -1,0 +1,32 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+openai = "*"
+langchain = "*"
+duckduckgo-search = "*"
+pkommand = {git = "https://github.com/berquerant/pkommand.git"}
+
+[dev-packages]
+pytest = "*"
+flake8 = "*"
+isort = "*"
+pyproject-flake8 = "*"
+black = "*"
+tox = "*"
+mypy = "*"
+pyparsing = "*"
+
+[requires]
+python_version = "3.11"
+
+[scripts]
+check = "tox -e isort,black,flake8,mypy -p 4"
+test = "tox -e py311"
+ci = "tox -e isort,black,flake8,mypy,py311 -p 4"
+fmt = "tox -e fmt"
+dev = "pip install --editable ."
+install = "pip install ."
+dist = "python setup.py sdist"
