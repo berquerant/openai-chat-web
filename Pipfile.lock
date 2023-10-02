@@ -589,12 +589,12 @@
         },
         "langchain": {
             "hashes": [
-                "sha256:ae84580a78c5f022cfd8b5be6642ec477a7d95c234ced49fa1c2d12c7e6d10c6",
-                "sha256:c6337778928b56ce4f162f9ccba82212750b8a3ff2735085af5d7dac33f7901a"
+                "sha256:cd96afe7a7bf567b8ab437bc2826c3693cf0fdfd24935f17c452b58542dba75d",
+                "sha256:d703ce82b6939f3f79188bf5a0bd637d32fc4b2bc1b568adad30a0282ad65bbf"
             ],
             "index": "pypi",
             "markers": "python_version < '4.0' and python_full_version >= '3.8.1'",
-            "version": "==0.0.300"
+            "version": "==0.0.305"
         },
         "langsmith": {
             "hashes": [
