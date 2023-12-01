@@ -1432,12 +1432,12 @@
         },
         "pyproject-flake8": {
             "hashes": [
-                "sha256:bdc7ca9b967b9724983903489b8943b72c668178fb69f03e8774ec74f6a13782",
-                "sha256:d43421caca0ef8a672874405fe63c722b0333e3c22c41648c6df60f21bab2b6b"
+                "sha256:6da8e5a264395e0148bc11844c6fb50546f1fac83ac9210f7328664135f9e70f",
+                "sha256:86ea5559263c098e1aa4f866776aa2cf45362fd91a576b9fd8fbbbb55db12c4e"
             ],
             "index": "pypi",
             "markers": "python_full_version >= '3.8.1'",
-            "version": "==6.0.0.post1"
+            "version": "==6.1.0"
         },
         "pytest": {
             "hashes": [
