@@ -24,6 +24,7 @@ class Agent:
 
 
 def new(chat_model: str, temperature: float, verbose: bool) -> Agent:
+    """Return new `Agent`."""
     searcher = DuckDuckGoSearchRun()
     tools = [
         Tool(

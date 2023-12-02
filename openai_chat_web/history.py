@@ -21,6 +21,8 @@ def parse(
     message_separator: str,
     default_role: str,
 ) -> History:
+    """Parse strings as  `History`."""
+
     def parse_message(message: str) -> Message:
         if role_separator not in message:
             return Message(role=default_role, content=message)

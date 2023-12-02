@@ -7,25 +7,23 @@ name = "pypi"
 openai = "*"
 langchain = "*"
 duckduckgo-search = "*"
-pkommand = {git = "https://github.com/berquerant/pkommand.git"}
+pkommand = {git = "https://github.com/berquerant/pkommand.git", ref = "0.4.1"}
 
 [dev-packages]
 pytest = "*"
-flake8 = "*"
-isort = "*"
-pyproject-flake8 = "*"
 black = "*"
 tox = "*"
 mypy = "*"
-pyparsing = "*"
+setuptools = "*"
+ruff = "*"
 
 [requires]
 python_version = "3.11"
 
 [scripts]
-check = "tox -e isort,black,flake8,mypy -p 4"
+check = "tox -e black,ruff,mypy -p 3"
 test = "tox -e py311"
-ci = "tox -e isort,black,flake8,mypy,py311 -p 4"
+ci = "tox -e black,ruff,mypy,py311 -p 4"
 fmt = "tox -e fmt"
 dev = "pip install --editable ."
 install = "pip install ."

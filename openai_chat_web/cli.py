@@ -22,8 +22,9 @@ def chat(
     verbose: bool = False,
     show_history: bool = False,
 ):
-    """
+    r"""
     Start chat.
+
     Receive messages from stdin in the following format:
 
     ROLE>
