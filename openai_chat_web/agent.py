@@ -1,3 +1,5 @@
+import re
+
 from langchain.agents import AgentType, Tool, initialize_agent
 from langchain.agents.agent import AgentExecutor
 from langchain.chat_models import ChatOpenAI
@@ -15,9 +17,9 @@ class Agent:
         try:
             return self.executor.run(message).lstrip()
         except ValueError as e:
-            m = str(e)
-            if m.startswith("Could not parse LLM output:"):
-                return m.removeprefix("Could not parse LLM output:").lstrip()
+            matched = re.search(r"Could not parse LLM output: (.+)", str(e))
+            if matched:
+                return matched.group(1)
             raise
 
 
@@ -31,7 +33,7 @@ def new(chat_model: str, temperature: float, verbose: bool) -> Agent:
         ),
     ]
     # mypy causes Unexpected keyword argument "model_name" ?
-    llm = ChatOpenAI(temperature=temperature, model_name=chat_model)  # type: ignore
+    llm = ChatOpenAI(temperature=temperature, model_name=chat_model)  # type: ignorellm = ChatOpenAI(temperature=temperature, model_name=chat_model)  # type: ignore
     agent = initialize_agent(
         tools,
         llm,
