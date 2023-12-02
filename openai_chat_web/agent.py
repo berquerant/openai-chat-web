@@ -33,7 +33,7 @@ def new(chat_model: str, temperature: float, verbose: bool) -> Agent:
         ),
     ]
     # mypy causes Unexpected keyword argument "model_name" ?
-    llm = ChatOpenAI(temperature=temperature, model_name=chat_model)  # type: ignorellm = ChatOpenAI(temperature=temperature, model_name=chat_model)  # type: ignore
+    llm = ChatOpenAI(temperature=temperature, model_name=chat_model)  # type: ignore
     agent = initialize_agent(
         tools,
         llm,
