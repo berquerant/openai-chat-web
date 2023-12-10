@@ -124,11 +124,11 @@
         },
         "anyio": {
             "hashes": [
-                "sha256:44a3c9aba0f5defa43261a8b3efb97891f2bd7d804e0e1f56419befa1adfc780",
-                "sha256:91dee416e570e92c64041bd18b900d1d6fa78dff7048769ce5ac5ddad004fbb5"
+                "sha256:56a415fbc462291813a94528a779597226619c8e78af7de0507333f700011e5f",
+                "sha256:5a0bec7085176715be77df87fc66d6c9d70626bd752fcc85f57cdbee5b3760da"
             ],
-            "markers": "python_version >= '3.7'",
-            "version": "==3.7.1"
+            "markers": "python_version >= '3.8'",
+            "version": "==4.1.0"
         },
         "attrs": {
             "hashes": [
@@ -356,12 +356,12 @@
         },
         "duckduckgo-search": {
             "hashes": [
-                "sha256:03f040ee7bd1a298e363bc578b14f9fea73777a09398d01ef75fc624ec2e8bf3",
-                "sha256:e4c4a1de246baf2ae9e5651b4aa362381573e9540d9e5829fa17ab7500f9a1f6"
+                "sha256:3636df4c5eec383c1c02f89c9693b6c5bbaeda38952e467a2fa930132f632ed4",
+                "sha256:4d07a02647da58f1e46e35f11719265f0ce06eed60e2c9c2b00b1105b9084d07"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.8'",
-            "version": "==3.9.9"
+            "version": "==3.9.11"
         },
         "frozenlist": {
             "hashes": [
