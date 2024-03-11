@@ -398,16 +398,16 @@
         },
         "curl-cffi": {
             "hashes": [
-                "sha256:00b538b67c60cd1c3286c7319813a3564079c62ccf126cc1462fff428f0c3be5",
-                "sha256:1e18bb9f73a31f7f6c61b7341c1a4742b200779c177fe06276a3a03fdb270b13",
-                "sha256:7d9a6a68c2aef90359a8d012edf7bdd81eaa1b16af684f21febf00fb54dd8d73",
-                "sha256:92baeb4544a2353eb882a2d827ba546f7430655d04272b0678eedf2ae4618309",
-                "sha256:984ac36e20070206e8729abdb00675dae233ea53fffe678c33b3869b26a9c537",
-                "sha256:a0385edcbb545e58757849308a47292a895ab3b3e36f5f1c2e19e8d8db546022",
-                "sha256:c02e53bf3774a02b20c5a4458af965555d11755119e575d91c2984cedd1baa9c"
+                "sha256:12e829af97cbf7c1d5afef177e786f6f404ddf163b08897a1ed087cadbeb4837",
+                "sha256:23b8a2872b160718c04b06b1f8aa4fb1a2f4f94bce7040493515e081a27cad19",
+                "sha256:3791b7a9ae4cb1298165300f2dc2d60a86779f055570ae83163fc2d8a74bf714",
+                "sha256:37e513cc149d024a2d625e202f2cc9d4423d2937343ea2e06f797d99779e62dc",
+                "sha256:3d01de6ed737ad1924aaa0198195b9020c38e77ce90ea3d72b9eacf4938c7adf",
+                "sha256:9ee519e960b5fc6e0bbf13d0ecba9ce5f6306cb929354504bf03cc30f59a8f63",
+                "sha256:ad3c1cf5360810825ec4bc3da425f26ee4098878a615dab9d309a99afd883ba9"
             ],
             "markers": "python_version >= '3.8'",
-            "version": "==0.6.0b9"
+            "version": "==0.6.2"
         },
         "dataclasses-json": {
             "hashes": [
@@ -427,12 +427,12 @@
         },
         "duckduckgo-search": {
             "hashes": [
-                "sha256:126878ceee1f964e21d07685b9c17af6144b8ee955422844bd56aa3c90a9b8f6",
-                "sha256:fa07dc7ce2e752c3e0963cceb5b5d46e1c081ca481f395e90d1a295f15f0fc81"
+                "sha256:127b57cd04826dc18d8d87a5eb354282cffb16fd179954ca88154a8690cdecf0",
+                "sha256:d66685f1ce457499de91f6b0efbb330415233a82f3bb88fea50e538eaa636bb6"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.8'",
-            "version": "==4.4.3"
+            "version": "==5.0"
         },
         "frozenlist": {
             "hashes": [
