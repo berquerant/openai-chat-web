@@ -1,44 +1,53 @@
-import re
+from langchain.agents import AgentExecutor, create_openai_tools_agent
+from langchain_core.prompts.chat import ChatPromptTemplate, MessagesPlaceholder
 
-from langchain.agents import AgentType, Tool, initialize_agent
-from langchain.agents.agent import AgentExecutor
-from langchain.chat_models import ChatOpenAI
-from langchain.tools import DuckDuckGoSearchRun
+from openai_chat_web import model, tool
+from openai_chat_web.history import History, Message
 
 
 class Agent:
-    executor: AgentExecutor
+    __executor: AgentExecutor
 
     def __init__(self, executor: AgentExecutor):
-        self.executor = executor
+        self.__executor = executor
 
-    def send(self, message: str) -> str:
-        # https://github.com/langchain-ai/langchain/issues/1358#issuecomment-1486132587
-        try:
-            return self.executor.run(message).lstrip()
-        except ValueError as e:
-            matched = re.search(r"Could not parse LLM output: (.+)", str(e))
-            if matched:
-                return matched.group(1)
-            raise
+    def send(self, messages: History) -> Message:
+        chat_history = messages.into_bases()
+        input_message = chat_history.pop().content
+        result = self.__executor.invoke(
+            {
+                "chat_history": chat_history,
+                "input": input_message,
+            }
+        )
+        return Message(role="ai", content=result["output"])
 
 
-def new(chat_model: str, temperature: float, verbose: bool) -> Agent:
-    """Return new `Agent`."""
-    searcher = DuckDuckGoSearchRun()
+def new(
+    chat_model: str = "gpt-3.5-turbo", temperature: float = 0.7, language: str = "English", verbose: bool = False
+) -> Agent:
+    """Return a new `Agent`."""
     tools = [
-        Tool(
-            name="duckduckgo-search",
-            func=searcher.run,
-            description="useful for when you need to search for latest information in web",
-        ),
+        tool.wikipedia(),
+        tool.duckduckgo(),
     ]
-    # mypy causes Unexpected keyword argument "model_name" ?
-    llm = ChatOpenAI(temperature=temperature, model_name=chat_model)  # type: ignore
-    agent = initialize_agent(
-        tools,
-        llm,
-        agent=AgentType.CHAT_ZERO_SHOT_REACT_DESCRIPTION,
-        verbose=verbose,
+    llm = model.chat(model=chat_model, temperature=temperature)
+
+    ai_message = f"""You are a helpful AI. \
+    Provide the best answers to user questions in {language}. \
+    Use tools only when necessary."""
+    history_placeholder = MessagesPlaceholder(variable_name="chat_history", optional=True)
+    user_message = "{input}"
+    scratchpad_placeholder = MessagesPlaceholder(variable_name="agent_scratchpad")
+    prompt = ChatPromptTemplate.from_messages(
+        [
+            ("ai", ai_message),
+            history_placeholder,
+            ("user", user_message),
+            scratchpad_placeholder,
+        ]
     )
-    return Agent(executor=agent)
+
+    agent = create_openai_tools_agent(llm, tools, prompt)
+    executor = AgentExecutor(agent=agent, tools=tools, verbose=verbose)  # type: ignore
+    return Agent(executor=executor)

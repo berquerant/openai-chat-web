@@ -4,10 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-openai = "*"
-langchain = "*"
 duckduckgo-search = "*"
 pkommand = {git = "https://github.com/berquerant/pkommand.git", ref = "0.4.1"}
+wikipedia = "*"
+langchain-openai = "*"
+langchain = "*"
 
 [dev-packages]
 pytest = "*"
@@ -24,7 +25,6 @@ python_version = "3.11"
 check = "tox -e black,ruff,mypy -p 3"
 test = "tox -e py311"
 ci = "tox -e black,ruff,mypy,py311 -p 4"
-fmt = "tox -e fmt"
 dev = "pip install --editable ."
 install = "pip install ."
 dist = "python setup.py sdist"

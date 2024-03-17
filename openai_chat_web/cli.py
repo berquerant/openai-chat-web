@@ -16,11 +16,9 @@ def chat(
     role_separator: str = ">\n",
     message_separator: str = "\n---\n",
     chat_model: str = "gpt-3.5-turbo",
-    temperature: float = 1.0,
-    user_role: str = "user",
-    ai_role: str = "AI",
+    temperature: float = 0.7,
+    language: str = "English",
     verbose: bool = False,
-    show_history: bool = False,
 ):
     r"""
     Start chat.
@@ -55,20 +53,14 @@ def chat(
 
     Chat replies are written to stdout, e.g.
 
-    $ echo "Hello" | openai_chat_web chat
-    AI>
-    Hello! How can I assist you today?
-
-    If show_history is true, then print chat history, e.g.
-
-    $ echo 'Hello!' |openai_chat_web chat --show_history
+    $ echo 'Hello!' | openai_chat_web chat
     user>
     Hello!
     ---
-    AI>
+    ai>
     Hello! How can I assist you today?
 
-    Default temperature is 1.0.
+    Default temperature is 0.7.
 
     If verbose is true, display verbose output.
     """
@@ -76,7 +68,6 @@ def chat(
         buffer=sys.stdin.read(),
         role_separator=role_separator,
         message_separator=message_separator,
-        default_role=user_role,
     )
     if not memory:
         raise NoInputError()
@@ -84,17 +75,13 @@ def chat(
     api = agent.new(
         chat_model=chat_model,
         temperature=temperature,
+        language=language,
         verbose=verbose,
     )
-    response = api.send(memory.into_str())
-    result = history.Message(role=ai_role, content=response)
+    response = api.send(memory)
+    memory.append(response)
 
-    if show_history:
-        memory.append(result)
-        print(memory.into_str(message_sep=message_separator, role_sep=role_separator))
-        return
-
-    print(result.into_str(sep=role_separator))
+    print(memory.into_str(message_sep=message_separator, role_sep=role_separator))
 
 
 def main() -> int:
