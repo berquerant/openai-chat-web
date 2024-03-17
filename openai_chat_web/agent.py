@@ -1,4 +1,4 @@
-from langchain.agents import AgentExecutor, create_openai_tools_agent
+from langchain.agents import AgentExecutor, create_openai_functions_agent
 from langchain_core.prompts.chat import ChatPromptTemplate, MessagesPlaceholder
 
 from openai_chat_web import model, tool
@@ -29,11 +29,12 @@ def new(
     """Return a new `Agent`."""
     tools = [
         tool.wikipedia(),
+        tool.tavily(),
         tool.duckduckgo(),
     ]
     llm = model.chat(model=chat_model, temperature=temperature)
 
-    ai_message = f"""You are a helpful AI. \
+    ai_message = f"""You are a helpful assistant. \
     Provide the best answers to user questions in {language}. \
     Use tools only when necessary."""
     history_placeholder = MessagesPlaceholder(variable_name="chat_history", optional=True)
@@ -48,6 +49,6 @@ def new(
         ]
     )
 
-    agent = create_openai_tools_agent(llm, tools, prompt)
+    agent = create_openai_functions_agent(llm, tools, prompt)
     executor = AgentExecutor(agent=agent, tools=tools, verbose=verbose)  # type: ignore
     return Agent(executor=executor)

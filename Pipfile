@@ -9,6 +9,8 @@ pkommand = {git = "https://github.com/berquerant/pkommand.git", ref = "0.4.1"}
 wikipedia = "*"
 langchain-openai = "*"
 langchain = "*"
+langchain-community = "*"
+tavily-python = "*"
 
 [dev-packages]
 pytest = "*"
