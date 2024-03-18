@@ -17,7 +17,7 @@ from langchain_community.utilities import DuckDuckGoSearchAPIWrapper, TextReques
 from openai_chat_web import token
 
 
-def wikipedia(top_k_results: int = 3, doc_content_chars_max: int = 800) -> WikipediaQueryRun:
+def wikipedia(top_k_results: int = 3, doc_content_chars_max: int = 4000) -> WikipediaQueryRun:
     """Return a new Wikipedia searcher."""
     return WikipediaQueryRun(
         api_wrapper=WikipediaAPIWrapper(top_k_results=top_k_results, doc_content_chars_max=doc_content_chars_max),
