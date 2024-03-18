@@ -1,7 +1,20 @@
+from typing import Optional, Type, cast
+
+from bs4 import BeautifulSoup
+from langchain.agents import load_tools
+from langchain.callbacks.manager import (
+    AsyncCallbackManagerForToolRun,
+    CallbackManagerForToolRun,
+)
+from langchain.pydantic_v1 import BaseModel, Field
+from langchain.tools import BaseTool
 from langchain.utilities.tavily_search import TavilySearchAPIWrapper
 from langchain_community.tools import DuckDuckGoSearchResults, WikipediaQueryRun
+from langchain_community.tools.requests.tool import RequestsGetTool
 from langchain_community.tools.tavily_search import TavilySearchResults
-from langchain_community.utilities import DuckDuckGoSearchAPIWrapper, WikipediaAPIWrapper
+from langchain_community.utilities import DuckDuckGoSearchAPIWrapper, TextRequestsWrapper, WikipediaAPIWrapper
+
+from openai_chat_web import token
 
 
 def wikipedia(top_k_results: int = 3, doc_content_chars_max: int = 800) -> WikipediaQueryRun:
@@ -36,3 +49,39 @@ def tavily() -> TavilySearchResults:
         Useful for when you need to answer questions about current events. \
         Input should be a search query.""",
     )
+
+
+class HTTPGetInput(BaseModel):
+    url: str = Field(description="should be a url (i.e. https://www.google.com)")
+
+
+class CustomHTTPGet(BaseTool):
+    name: str = "custom_http_get"
+    description: str = """A portal to the internet. \
+    Use this when you need to get specific content from a website. \
+    Input should be a url (i.e. https://www.google.com). \
+    The output will be the concatenated text part of the body element of the response html of the GET request."""
+    args_schema: Type[BaseModel] = HTTPGetInput
+    max_tokens: int = 3000
+    model_name: str = "gpt-3.5-turbo"
+
+    @property
+    def __requests_get(self) -> TextRequestsWrapper:
+        get_tool = cast(RequestsGetTool, load_tools(["requests_get"], allow_dangerous_tools=True)[0])
+        wrapper = cast(TextRequestsWrapper, get_tool.requests_wrapper)
+        return wrapper
+
+    def __get_text(self, html: str) -> str:
+        text = BeautifulSoup(html, "html.parser").find("body").get_text(separator="\n", strip=True)
+        tokens = token.List.new(text, self.model_name)
+        return tokens.read(n=self.max_tokens)
+
+    def _run(self, url: str, run_manager: Optional[CallbackManagerForToolRun] = None) -> str:
+        """Use the tool."""
+        html = cast(str, self.__requests_get.get(url))
+        return self.__get_text(html)
+
+    async def _arun(self, url: str, run_manager: Optional[AsyncCallbackManagerForToolRun] = None) -> str:
+        """Use the tool asynchronously."""
+        html = cast(str, await self.__requests_get.aget(url))
+        return self.__get_text(html)

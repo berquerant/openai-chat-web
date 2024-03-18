@@ -31,6 +31,7 @@ def new(
         tool.wikipedia(),
         tool.tavily(),
         tool.duckduckgo(),
+        tool.CustomHTTPGet(model_name=chat_model),
     ]
     llm = model.chat(model=chat_model, temperature=temperature)
 

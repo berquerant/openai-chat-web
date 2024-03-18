@@ -26,7 +26,7 @@ def test_help():
         [
             "pip",
             "install",
-            "dist/openai_chat_web-0.3.2.tar.gz",
+            "dist/openai_chat_web-0.4.0.tar.gz",
         ],
         pwd,
     )

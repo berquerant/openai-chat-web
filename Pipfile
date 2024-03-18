@@ -11,6 +11,8 @@ langchain-openai = "*"
 langchain = "*"
 langchain-community = "*"
 tavily-python = "*"
+beautifulsoup4 = "*"
+tiktoken = "*"
 
 [dev-packages]
 pytest = "*"
