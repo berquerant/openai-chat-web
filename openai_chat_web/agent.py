@@ -1,4 +1,4 @@
-from langchain.agents import AgentExecutor, create_openai_functions_agent
+from langchain.agents import AgentExecutor, create_openai_tools_agent
 from langchain_core.prompts.chat import ChatPromptTemplate, MessagesPlaceholder
 
 from openai_chat_web import model, tool
@@ -49,6 +49,6 @@ def new(
         ]
     )
 
-    agent = create_openai_functions_agent(llm, tools, prompt)
+    agent = create_openai_tools_agent(llm, tools, prompt)
     executor = AgentExecutor(agent=agent, tools=tools, verbose=verbose)  # type: ignore
     return Agent(executor=executor)
