@@ -34,7 +34,7 @@ def new(
     ]
     llm = model.chat(model=chat_model, temperature=temperature)
 
-    ai_message = f"""You are a helpful assistant. \
+    system_message = f"""You are a helpful assistant. \
     Provide the best answers to user questions in {language}. \
     Use tools only when necessary."""
     history_placeholder = MessagesPlaceholder(variable_name="chat_history", optional=True)
@@ -42,7 +42,7 @@ def new(
     scratchpad_placeholder = MessagesPlaceholder(variable_name="agent_scratchpad")
     prompt = ChatPromptTemplate.from_messages(
         [
-            ("ai", ai_message),
+            ("system", system_message),
             history_placeholder,
             ("user", user_message),
             scratchpad_placeholder,
