@@ -59,6 +59,8 @@ class CustomHTTPGet(BaseTool):
     name: str = "custom_http_get"
     description: str = """A portal to the internet. \
     Use this when you need to get specific content from a website. \
+    You should use this only when a user explicitly specifies a URL \
+    and you need the contents of the web page at that URL to answer a question from the user. \
     Input should be a url (i.e. https://www.google.com). \
     The output will be the concatenated text part of the body element of the response html of the GET request."""
     args_schema: Type[BaseModel] = HTTPGetInput
