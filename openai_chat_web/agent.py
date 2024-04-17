@@ -28,6 +28,7 @@ def new(
 ) -> Agent:
     """Return a new `Agent`."""
     tools = [
+        tool.now,
         tool.wikipedia(),
         tool.tavily(),
         tool.duckduckgo(),

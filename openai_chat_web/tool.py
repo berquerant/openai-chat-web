@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import Optional, Type, cast
 
 from bs4 import BeautifulSoup
@@ -13,8 +14,15 @@ from langchain_community.tools import DuckDuckGoSearchResults, WikipediaQueryRun
 from langchain_community.tools.requests.tool import RequestsGetTool
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_community.utilities import DuckDuckGoSearchAPIWrapper, TextRequestsWrapper, WikipediaAPIWrapper
+from langchain_core.tools import tool as core_tool
 
 from openai_chat_web import token
+
+
+@core_tool
+def now() -> str:
+    """Get the current time as a string in %Y-%m-%d %H:%M:%S format."""
+    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 
 def wikipedia(top_k_results: int = 3, doc_content_chars_max: int = 4000) -> WikipediaQueryRun:
