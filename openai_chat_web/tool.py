@@ -28,7 +28,7 @@ def now() -> str:
 def wikipedia(top_k_results: int = 3, doc_content_chars_max: int = 4000) -> WikipediaQueryRun:
     """Return a new Wikipedia searcher."""
     return WikipediaQueryRun(
-        api_wrapper=WikipediaAPIWrapper(top_k_results=top_k_results, doc_content_chars_max=doc_content_chars_max),
+        api_wrapper=WikipediaAPIWrapper(top_k_results=top_k_results, doc_content_chars_max=doc_content_chars_max),  # type: ignore
         description="""A wrapper around Wikipedia. \
         Useful for when you need to answer general questions about people, places, companies, facts, \
         historical events, or other subjects. \
