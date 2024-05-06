@@ -25,7 +25,7 @@ def now() -> str:
     return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 
-def wikipedia(top_k_results: int = 3, doc_content_chars_max: int = 4000) -> WikipediaQueryRun:
+def wikipedia(top_k_results: int = 3, doc_content_chars_max: int = 1000) -> WikipediaQueryRun:
     """Return a new Wikipedia searcher."""
     return WikipediaQueryRun(
         api_wrapper=WikipediaAPIWrapper(top_k_results=top_k_results, doc_content_chars_max=doc_content_chars_max),  # type: ignore
