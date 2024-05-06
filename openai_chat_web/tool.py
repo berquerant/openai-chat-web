@@ -69,7 +69,7 @@ class CustomDuckDuckGoSearchAPIWrapper(DuckDuckGoSearchAPIWrapper):
         return r
 
 
-def duckduckgo(max_results: int = 5, content_chars_max: int = 1000) -> DuckDuckGoSearchResults:
+def duckduckgo(max_results: int = 3, content_chars_max: int = 1000) -> DuckDuckGoSearchResults:
     """Return a new DuckDuckGo searcher."""
     return DuckDuckGoSearchResults(
         api_wrapper=CustomDuckDuckGoSearchAPIWrapper(max_results=max_results, content_chars_max=content_chars_max),
