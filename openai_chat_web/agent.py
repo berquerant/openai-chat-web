@@ -1,4 +1,4 @@
-from langchain.agents import AgentExecutor, create_openai_tools_agent
+from langchain.agents import AgentExecutor, create_tool_calling_agent
 from langchain_core.prompts.chat import ChatPromptTemplate, MessagesPlaceholder
 
 from openai_chat_web import model, tool
@@ -51,6 +51,6 @@ def new(
         ]
     )
 
-    agent = create_openai_tools_agent(llm, tools, prompt)
+    agent = create_tool_calling_agent(llm, tools, prompt)  # type: ignore
     executor = AgentExecutor(agent=agent, tools=tools, verbose=verbose)  # type: ignore
     return Agent(executor=executor)
