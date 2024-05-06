@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Optional, Type, cast
+from typing import Dict, List, Optional, Type, cast
 
 from bs4 import BeautifulSoup
 from langchain.agents import load_tools
@@ -36,10 +36,43 @@ def wikipedia(top_k_results: int = 3, doc_content_chars_max: int = 4000) -> Wiki
     )
 
 
-def duckduckgo(max_results: int = 5) -> DuckDuckGoSearchResults:
+class CustomDuckDuckGoSearchAPIWrapper(DuckDuckGoSearchAPIWrapper):
+    """Customized wrapper for DuckDuckGo Search API."""
+
+    content_chars_max: int
+
+    def run(self, query: str) -> str:
+        """Run query through DuckDuckGo and return concatenated results."""
+        return super().run(query)[: self.content_chars_max]
+
+    def results(self, query: str, max_results: int, source: Optional[str] = None) -> List[Dict[str, str]]:
+        """
+        Run query through DuckDuckGo and return metadata.
+
+        Args:
+        ----
+            query: The query to search for.
+            max_results: The number of results to return.
+            source: The source to look from.
+
+        Returns:
+        -------
+            A list of dictionaries with the following keys:
+                snippet - The description of the result.
+                title - The title of the result.
+                link - The link to the result.
+
+        """
+        r = super().results(query=query, max_results=max_results, source=source)
+        for x in r:
+            x["snippet"] = x["snippet"][: self.content_chars_max]
+        return r
+
+
+def duckduckgo(max_results: int = 5, content_chars_max: int = 1000) -> DuckDuckGoSearchResults:
     """Return a new DuckDuckGo searcher."""
     return DuckDuckGoSearchResults(
-        api_wrapper=DuckDuckGoSearchAPIWrapper(max_results=max_results),
+        api_wrapper=CustomDuckDuckGoSearchAPIWrapper(max_results=max_results, content_chars_max=content_chars_max),
         description="""A wrapper around Duck Duck Go Search. \
         Useful for when you need to get a broader perspective on a particular topic. \
         Input should be a search query. \
