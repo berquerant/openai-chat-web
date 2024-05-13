@@ -311,16 +311,19 @@
         },
         "curl-cffi": {
             "hashes": [
-                "sha256:12e829af97cbf7c1d5afef177e786f6f404ddf163b08897a1ed087cadbeb4837",
-                "sha256:23b8a2872b160718c04b06b1f8aa4fb1a2f4f94bce7040493515e081a27cad19",
-                "sha256:3791b7a9ae4cb1298165300f2dc2d60a86779f055570ae83163fc2d8a74bf714",
-                "sha256:37e513cc149d024a2d625e202f2cc9d4423d2937343ea2e06f797d99779e62dc",
-                "sha256:3d01de6ed737ad1924aaa0198195b9020c38e77ce90ea3d72b9eacf4938c7adf",
-                "sha256:9ee519e960b5fc6e0bbf13d0ecba9ce5f6306cb929354504bf03cc30f59a8f63",
-                "sha256:ad3c1cf5360810825ec4bc3da425f26ee4098878a615dab9d309a99afd883ba9"
+                "sha256:449ab07e07335558997cd62296b5c4f16ce27630de7830e4ad22441049a0ef1e",
+                "sha256:5d39849371bbf3eab048113693715a8da5c729c494cccfa1128d768d96fdc31e",
+                "sha256:694d88f7065c59c651970f14bc415431f65ac601a9ba537463d70f432a48ccfc",
+                "sha256:6faf01aa8d98d322b877d3d801544692c73729ea6eb4a45af83514a4ecd1c8fe",
+                "sha256:7e3616141a2a0be7896e7dc5da1ed3965e1a78aa2e563d8aba7a641135aeaf1b",
+                "sha256:b55c53bb6dff713cb63f76e2f147e2d54c984b1b09df66b08f52f3acae1aeca0",
+                "sha256:bd16cccc0d3e93c2fbc4f4cb7cce0e10cb2ef7f8957352f3f0d770f0d6e05702",
+                "sha256:c09a062b8aac93d4890d2c33b7053c0e1a5cf275328b80c1fb1a950310df75f2",
+                "sha256:d65aa649abb24020c2ad7b3ce45e2816d1ffe25df06f1a6b0f52fbf353af82e0",
+                "sha256:e3a5099b98c4bf12cc1afecb3409a9c57e7ebce9447a03c96dfb661ad8fa5e79"
             ],
             "markers": "python_version >= '3.8'",
-            "version": "==0.6.2"
+            "version": "==0.7.0b4"
         },
         "dataclasses-json": {
             "hashes": [
@@ -340,12 +343,12 @@
         },
         "duckduckgo-search": {
             "hashes": [
-                "sha256:c6a6ddc3cdefc6bb7736c49fa9bdbd0a7a6bdf7ace50260cf06f8300341c9441",
-                "sha256:da6328f977295077d1095625474060b688980ae14bc196cee05f13a74f801e9a"
+                "sha256:2ee309e76b7e34ee84bddd5e046df723faecf7f999acdb499f3dad7e8a614c21",
+                "sha256:a07d94babe45c9a9bd0ce2dc185346b47fe95dab516d414f21f06a0a1200aca9"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.8'",
-            "version": "==5.3.0"
+            "version": "==5.3.1"
         },
         "frozenlist": {
             "hashes": [
