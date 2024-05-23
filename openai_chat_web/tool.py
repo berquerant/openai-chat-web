@@ -9,11 +9,11 @@ from langchain.callbacks.manager import (
 )
 from langchain.pydantic_v1 import BaseModel, Field
 from langchain.tools import BaseTool
-from langchain.utilities.tavily_search import TavilySearchAPIWrapper
 from langchain_community.tools import DuckDuckGoSearchResults, WikipediaQueryRun
 from langchain_community.tools.requests.tool import RequestsGetTool
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_community.utilities import DuckDuckGoSearchAPIWrapper, TextRequestsWrapper, WikipediaAPIWrapper
+from langchain_community.utilities.tavily_search import TavilySearchAPIWrapper
 from langchain_core.tools import tool as core_tool
 
 from openai_chat_web import token
