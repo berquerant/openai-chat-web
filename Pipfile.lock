@@ -343,12 +343,12 @@
         },
         "duckduckgo-search": {
             "hashes": [
-                "sha256:2ee309e76b7e34ee84bddd5e046df723faecf7f999acdb499f3dad7e8a614c21",
-                "sha256:a07d94babe45c9a9bd0ce2dc185346b47fe95dab516d414f21f06a0a1200aca9"
+                "sha256:0f9ea0cb0d23575d98255931c0d437cf67ac958be8e54459704b833fa903e693",
+                "sha256:88e008e46b8c6037559f0617dfd9f034e5dd9b384b2795343a9ef25782ca053d"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.8'",
-            "version": "==5.3.1"
+            "version": "==6.1.0"
         },
         "frozenlist": {
             "hashes": [
@@ -1006,6 +1006,20 @@
             ],
             "markers": "python_version >= '3.8'",
             "version": "==2.18.2"
+        },
+        "pyreqwest-impersonate": {
+            "hashes": [
+                "sha256:27db49d0e244d5ff31cce7f66ba3a4fac4a53c33445970e6c7467672d9c5f56f",
+                "sha256:482e6254fcc666234cc3a53cdbfa8642991a7e454e45233f040687f9c96ffa88",
+                "sha256:539d9a14f308a778a9a30afeb308207588703d1d2e74cd9b890cf9f5c4f86bce",
+                "sha256:9012709b52d84d940f193e77d5e73d4b61c782ad60220b6648a54865a372eece",
+                "sha256:910fb19e209a4a49156410226e010dff674c69e8c570817cc3fec9e8d80b6ea5",
+                "sha256:9ed0e07181a47af12624e50db388b0eb4e6c985be9a276ac5c7494fef492a100",
+                "sha256:d1b2f7a44c907699a8c8a40bcc9b25b5a8db6f37f292f106374314ef4d469f0b",
+                "sha256:f0aedda1b8b3d62c627c8a8921a2fc702977108f83c90d675fa1900e68ea8fe5"
+            ],
+            "markers": "python_version >= '3.8'",
+            "version": "==0.4.5"
         },
         "pyyaml": {
             "hashes": [
