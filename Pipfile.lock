@@ -343,12 +343,12 @@
         },
         "duckduckgo-search": {
             "hashes": [
-                "sha256:0f9ea0cb0d23575d98255931c0d437cf67ac958be8e54459704b833fa903e693",
-                "sha256:88e008e46b8c6037559f0617dfd9f034e5dd9b384b2795343a9ef25782ca053d"
+                "sha256:6c06b890d5c82206b196927af9d8c104c51896c747541a950b64eaacd0ce9144",
+                "sha256:7ac06eef67c2c848757c3ee35bb89a8e3371ed8eea3a03e943793655a49f3b71"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.8'",
-            "version": "==6.1.0"
+            "version": "==6.1.1"
         },
         "frozenlist": {
             "hashes": [
