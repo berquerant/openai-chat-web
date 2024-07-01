@@ -565,20 +565,20 @@
         },
         "langchain-core": {
             "hashes": [
-                "sha256:426a5a4fea95a5db995ba5ab560b76edd4998fb6fe52ccc28ac987092a4cbfcd",
-                "sha256:f1c59082642921727844e1cd0eb36d451edd1872c20e193aa3142aac03495986"
+                "sha256:33d1fc234ab58c80476eb5bbde2107ef522a2ce8f46bdf47d9e1bd21e054208f",
+                "sha256:6eb72086b6bc86db9812da98f79e507c2209a15c0112aefd214a04182ada8586"
             ],
             "markers": "python_version < '4.0' and python_full_version >= '3.8.1'",
-            "version": "==0.2.9"
+            "version": "==0.2.10"
         },
         "langchain-openai": {
             "hashes": [
-                "sha256:730a94d68208678b9b9f64e4959a87057e021d6600754ea8b954e7765c7a62f1",
-                "sha256:afae71ef315c967685e53fe061470438000946739a9492d5f2d53bd4ae9d495a"
+                "sha256:03318669bcb3238f7d1bb043329f91d150ca09246f1faf569ef299f535405c71",
+                "sha256:4344b6c5c67088a28eed80ba763157fdd1d690cee679966a021b42f305dbf7b5"
             ],
             "index": "pypi",
             "markers": "python_version < '4.0' and python_full_version >= '3.8.1'",
-            "version": "==0.1.9"
+            "version": "==0.1.13"
         },
         "langchain-text-splitters": {
             "hashes": [
@@ -590,11 +590,11 @@
         },
         "langsmith": {
             "hashes": [
-                "sha256:3251d823225eef23ee541980b9d9e506367eabbb7f985a086b5d09e8f78ba7e9",
-                "sha256:585ef3a2251380bd2843a664c9a28da4a7d28432e3ee8bcebf291ffb8e1f0af0"
+                "sha256:9b3653e7d316036b0c60bf0bc3e280662d660f485a4ebd8e5c9d84f9831ae79c",
+                "sha256:c02e2bbc488c10c13b52c69d271eb40bd38da078d37b6ae7ae04a18bd48140be"
             ],
             "markers": "python_version < '4.0' and python_full_version >= '3.8.1'",
-            "version": "==0.1.81"
+            "version": "==0.1.82"
         },
         "lxml": {
             "hashes": [
@@ -836,11 +836,11 @@
         },
         "openai": {
             "hashes": [
-                "sha256:7b26544cef80f125431c073ffab3811d2421fbb9e30d3bd5c2436aba00b042d5",
-                "sha256:d6177087f150b381d49499be782d764213fdf638d391b29ca692b84dd675a389"
+                "sha256:009bfa1504c9c7ef64d87be55936d142325656bbc6d98c68b669d6472e4beb09",
+                "sha256:3d1e0b0aac9b0db69a972d36dc7efa7563f8e8d65550b27a48f2a0c2ec207e80"
             ],
             "markers": "python_full_version >= '3.7.1'",
-            "version": "==1.35.3"
+            "version": "==1.35.7"
         },
         "orjson": {
             "hashes": [
@@ -1293,11 +1293,11 @@
         },
         "tenacity": {
             "hashes": [
-                "sha256:28522e692eda3e1b8f5e99c51464efcc0b9fc86933da92415168bc1c4e2308fa",
-                "sha256:54b1412b878ddf7e1f1577cd49527bad8cdef32421bd599beac0c6c3f10582fd"
+                "sha256:9e6f7cf7da729125c7437222f8a522279751cdfbe6b67bfe64f75d3a348661b2",
+                "sha256:cd80a53a79336edba8489e767f729e4f391c896956b57140b5d7511a64bbd3ef"
             ],
             "markers": "python_version >= '3.8'",
-            "version": "==8.4.1"
+            "version": "==8.4.2"
         },
         "tiktoken": {
             "hashes": [
