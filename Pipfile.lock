@@ -1299,12 +1299,12 @@
         },
         "tavily-python": {
             "hashes": [
-                "sha256:032d598fe855d77c61e75ddd1faafd3b2c3aff37e88f43431a728610e26dcc4d",
-                "sha256:14ac3d0cb5d2ce05487e7e8020460cd7b88d83c9916f46e344bcf25577acd346"
+                "sha256:7fd41ce5422ccfeade8dab564f5c524b0cc683cc02cbc7bc9625a3275c31355a",
+                "sha256:acc3bb08668d05ee2decf94dba17811bc434a18c78acb7a1ca7c483b3a316f38"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.6'",
-            "version": "==0.3.3"
+            "version": "==0.3.4"
         },
         "tenacity": {
             "hashes": [
