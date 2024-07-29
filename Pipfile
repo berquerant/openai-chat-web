@@ -23,7 +23,7 @@ setuptools = "*"
 ruff = "*"
 
 [requires]
-python_version = "3.11"
+python_version = "3.12"
 
 [scripts]
 check = "tox run-parallel -m check --parallel-no-spinner --parallel-live"
