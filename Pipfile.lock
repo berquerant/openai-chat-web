@@ -343,12 +343,12 @@
         },
         "duckduckgo-search": {
             "hashes": [
-                "sha256:1a03f799b85fdfa08d5e6478624683f373b9dc35e6f145544b9cab72a4f575fa",
-                "sha256:d664ec096193e3fb43bdfae4b0ad9c04e44094b58f41998adcdd20a86ee1ed74"
+                "sha256:19358d892ae7d010492d08f7ed5f7790e2df25a3f6bf1c83e8de9bdcf895fd91",
+                "sha256:58c1df49e1c9e671f35d3dba34463dde64a94fb4446c9cc5a9e7bec6664edeaa"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.8'",
-            "version": "==6.2.1"
+            "version": "==6.2.4"
         },
         "frozenlist": {
             "hashes": [
@@ -910,6 +910,20 @@
         "pkommand": {
             "git": "https://github.com/berquerant/pkommand.git",
             "ref": "16b6ef180e4d82f88889c0d59f0921693bd2b4d5"
+        },
+        "primp": {
+            "hashes": [
+                "sha256:3aad76e319c54b0166c12a8dcd5935c47c95189bffdc5a7c73a515a2814a0786",
+                "sha256:5a9df95f033305f61a1ed906e717eb606c5570447ca9f3f37ae48ba6b59f7982",
+                "sha256:8019767eafba068178e921aa0374e668cbb432e616b9a092027376bc4ad3223c",
+                "sha256:aa93fe21f99b846ce9caecf11b26cf84f36ff7ddcfdb23ba18f5e685087557f9",
+                "sha256:ba0612eae5b55e82269d7804aa417dd452fcd446123483731d52fec8c44342e2",
+                "sha256:dfd13fd1c02f83a2dd0b87e6b7dbd893ee1cc13271b2a1eb229d5c47bf0935f6",
+                "sha256:e15cf0b6a217a5c3a0a75f611440c498eadfad09be3ce3c0b3755647fa7c5063",
+                "sha256:f4e4cd37eabd6958e578e26fa120de53f039dce469b4b5171adc45b87be6a3d9"
+            ],
+            "markers": "python_version >= '3.8'",
+            "version": "==0.5.4"
         },
         "pycparser": {
             "hashes": [
