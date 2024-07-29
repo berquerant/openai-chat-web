@@ -2,13 +2,13 @@ from datetime import datetime
 from typing import Dict, List, Optional, Type, cast
 
 from bs4 import BeautifulSoup
-from langchain.agents import load_tools
 from langchain.callbacks.manager import (
     AsyncCallbackManagerForToolRun,
     CallbackManagerForToolRun,
 )
 from langchain.pydantic_v1 import BaseModel, Field
 from langchain.tools import BaseTool
+from langchain_community.agent_toolkits.load_tools import load_tools
 from langchain_community.tools import DuckDuckGoSearchResults, WikipediaQueryRun
 from langchain_community.tools.requests.tool import RequestsGetTool
 from langchain_community.tools.tavily_search import TavilySearchResults
