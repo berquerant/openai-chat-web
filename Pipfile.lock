@@ -1101,12 +1101,12 @@
         },
         "tavily-python": {
             "hashes": [
-                "sha256:415db6e98d9f03f0879c33bd3d0d3d766f2c1333fc7559fdce82cc8514a7127b",
-                "sha256:5ee7a7a5eb06674dfb68606608b5c6feea411755e0ea4ec14aa6c4a2cbcaa696"
+                "sha256:c4412879f0924439ee1dc7a85bc931f78139b095bcdd996cded279a27a383c3d",
+                "sha256:d46e87c38b0eaa9e41896248d5523948fcb84f411a761b6b6b0ddb51c1f15b45"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.6'",
-            "version": "==0.3.5"
+            "version": "==0.3.7"
         },
         "tenacity": {
             "hashes": [
