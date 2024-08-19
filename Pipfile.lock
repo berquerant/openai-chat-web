@@ -277,12 +277,12 @@
         },
         "duckduckgo-search": {
             "hashes": [
-                "sha256:96529ecfbd55afa28705b38413003cb3cfc620e55762d33184887545de27dc96",
-                "sha256:c8171bcd6ff4d051f78c70ea23bd34c0d8e779d72973829d3a6b40ccc05cd7c2"
+                "sha256:7c0f89faec882278f9ffc9900fe9118f6573cc694eff3d39ed9bbd3ae2f1f26d",
+                "sha256:c0bc2a78595c39e30aaedb7bca5a5f83e1932fbed25393e61b4b3ffb10cf99bb"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.8'",
-            "version": "==6.2.6"
+            "version": "==6.2.9"
         },
         "frozenlist": {
             "hashes": [
@@ -836,17 +836,17 @@
         },
         "primp": {
             "hashes": [
-                "sha256:3714abfda79d3f5c90a5363db58994afbdbacc4b94fe14e9e5f8ab97e7b82577",
-                "sha256:66c7eecc5a55225c42cfb99af857df04f994f3dd0d327c016d3af5414c1a2242",
-                "sha256:78e13fc5d4d90d44a005dbd5dda116981828c803c86cf85816b3bb5363b045c8",
-                "sha256:8623e8a25fd686785296b12175f4173250a08db1de9ee4063282e262b94bf3f2",
-                "sha256:8b424118d6bab6f9d4980d0f35d5ccc1213ab9f1042497c6ee11730f2f94a876",
-                "sha256:cff9792e8422424528c23574b5364882d68134ee2743f4a2ae6a765746fb3028",
-                "sha256:df262271cc1a41f4bf80d68396e967a27d7d3d3de355a3d016f953130e7a20be",
-                "sha256:e54765900ee40eceb6bde43676d7e0b2e16ca1f77c0753981fe5e40afc0c2010"
+                "sha256:25ef0a1be619a621f197ed9d9768cedde2b4f1e8cd0764b609b06aa5773b4de9",
+                "sha256:6e16aaab98bddea6fef90337e170fd2c232d399fb75d36dda53dd9f956cd9eeb",
+                "sha256:74585b3fb460dd13379b36d6c7ebc1efb24e92d21696476b93c4b97a2638f4ac",
+                "sha256:cf391210e28397ddbbbea7216c8fe72caa61a3a407e7faba351825ecf6ff3bec",
+                "sha256:e74173d87b232d276b0a64ce21717b993e2460677cb81d3289965a80f6675abd",
+                "sha256:e7c2f0443afd3064efbe267e0515657173531bc89ee36ea21794edf08d931be9",
+                "sha256:e941355ca729eb277613f9c5ee0b0f4273d3df9440a177dccc1780ad0c752858",
+                "sha256:f36ff625e1531f051bdad68d4cd8832ba8c7f1dec7b430af8206562b37656a28"
             ],
             "markers": "python_version >= '3.8'",
-            "version": "==0.5.5"
+            "version": "==0.6.0"
         },
         "pydantic": {
             "hashes": [
