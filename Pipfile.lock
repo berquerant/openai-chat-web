@@ -1176,12 +1176,12 @@
         },
         "tavily-python": {
             "hashes": [
-                "sha256:c4412879f0924439ee1dc7a85bc931f78139b095bcdd996cded279a27a383c3d",
-                "sha256:d46e87c38b0eaa9e41896248d5523948fcb84f411a761b6b6b0ddb51c1f15b45"
+                "sha256:b3fd0d7102bb34f0dfb0fd24378e2029504a9836ffe7f07c013824105d9f6a5a",
+                "sha256:e4517041dd135f171858d7e65a7cae085597871bbdc1a13d27990acb536e55c3"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.6'",
-            "version": "==0.3.7"
+            "version": "==0.4.0"
         },
         "tenacity": {
             "hashes": [
