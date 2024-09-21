@@ -4,12 +4,12 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-duckduckgo-search = "*"
+duckduckgo-search = "==6.2.12"
 pkommand = {git = "https://github.com/berquerant/pkommand.git", ref = "0.4.1"}
 wikipedia = "*"
-langchain-openai = "*"
-langchain = "*"
-langchain-community = "*"
+langchain-openai = "==0.2.0"
+langchain = "==0.3.0"
+langchain-community = "==0.3.0"
 tavily-python = "*"
 beautifulsoup4 = "*"
 tiktoken = "*"
@@ -23,7 +23,7 @@ setuptools = "*"
 ruff = "*"
 
 [requires]
-python_version = "3.12"
+python_version = "3.13"
 
 [scripts]
 check = "tox run-parallel -m check --parallel-no-spinner --parallel-live"

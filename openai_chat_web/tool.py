@@ -1,12 +1,11 @@
 from datetime import datetime
-from typing import Dict, List, Optional, Type, cast
+from typing import Dict, List, Optional, cast
 
 from bs4 import BeautifulSoup
 from langchain.callbacks.manager import (
     AsyncCallbackManagerForToolRun,
     CallbackManagerForToolRun,
 )
-from langchain.pydantic_v1 import BaseModel, Field
 from langchain.tools import BaseTool
 from langchain_community.agent_toolkits.load_tools import load_tools
 from langchain_community.tools import DuckDuckGoSearchResults, WikipediaQueryRun
@@ -15,6 +14,7 @@ from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_community.utilities import DuckDuckGoSearchAPIWrapper, TextRequestsWrapper, WikipediaAPIWrapper
 from langchain_community.utilities.tavily_search import TavilySearchAPIWrapper
 from langchain_core.tools import tool as core_tool
+from pydantic import BaseModel, Field
 
 from openai_chat_web import token
 
@@ -104,9 +104,9 @@ class CustomHTTPGet(BaseTool):
     and you need the contents of the web page at that URL to answer a question from the user. \
     Input should be a url (i.e. https://www.google.com). \
     The output will be the concatenated text part of the body element of the response html of the GET request."""
-    args_schema: Type[BaseModel] = HTTPGetInput
+    args_schema: BaseTool = HTTPGetInput  # type: ignore
     max_tokens: int = 3000
-    model_name: str = "gpt-3.5-turbo"
+    model_name: str = "gpt-4o-mini"
 
     @property
     def __requests_get(self) -> TextRequestsWrapper:
