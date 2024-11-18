@@ -7,7 +7,7 @@ name = "pypi"
 duckduckgo-search = "==6.3.3"
 pkommand = {git = "https://github.com/berquerant/pkommand.git", ref = "0.4.1"}
 wikipedia = "*"
-langchain-openai = "==0.2.5"
+langchain-openai = "==0.2.8"
 langchain = "==0.3.7"
 langchain-community = "==0.3.5"
 tavily-python = "*"
