@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "4d6ea7c1e2d82fc87fb016a4657cc9cce0c78a55f01a3f64077fa6d42fba86fb"
+            "sha256": "37fca100137fe81b2422902a98aab676b7b7e1017f77ec5216b190947ca05874"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -615,12 +615,12 @@
         },
         "langchain": {
             "hashes": [
-                "sha256:4950c4ad627d0aa95ce6bda7de453e22059b7e7836b562a8f781fb0b05d7294c",
-                "sha256:ade5a1fee2f94f2e976a6c387f97d62cc7f0b9f26cfe0132a41d2bda761e1045"
+                "sha256:4ae38d4c9f9ec5cd1a16a505b451a57c0aab2807d6c9f8cb5b346d06301b2232",
+                "sha256:aef0f9bdaf4a4d3d50aec348438135987bda1d83070b49f77032f561d3a761d8"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.9' and python_version < '4.0'",
-            "version": "==0.3.9"
+            "version": "==0.3.10"
         },
         "langchain-community": {
             "hashes": [
