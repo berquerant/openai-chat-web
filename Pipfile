@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-duckduckgo-search = "==7.2.0"
+duckduckgo-search = "==7.2.1"
 pkommand = {git = "https://github.com/berquerant/pkommand.git", ref = "0.4.1"}
 wikipedia = "*"
 langchain-openai = "==0.2.14"
