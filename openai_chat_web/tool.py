@@ -106,7 +106,7 @@ class CustomHTTPGet(BaseTool):
     The output will be the concatenated text part of the body element of the response html of the GET request."""
     args_schema: BaseTool = HTTPGetInput  # type: ignore
     max_tokens: int = 3000
-    model_name: str = "gpt-4o-mini"
+    model_name: str = "gpt-4o"
 
     @property
     def __requests_get(self) -> TextRequestsWrapper:
