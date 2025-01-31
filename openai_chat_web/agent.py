@@ -24,7 +24,7 @@ class Agent:
 
 
 def new(
-    chat_model: str = "gpt-3.5-turbo", temperature: float = 0.7, language: str = "English", verbose: bool = False
+    chat_model: str = "gpt-4o", temperature: float = 0.7, language: str = "English", verbose: bool = False
 ) -> Agent:
     """Return a new `Agent`."""
     tools = [

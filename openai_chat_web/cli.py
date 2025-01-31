@@ -15,7 +15,7 @@ class NoInputError(Exception):
 def chat(
     role_separator: str = ">\n",
     message_separator: str = "\n---\n",
-    chat_model: str = "gpt-3.5-turbo",
+    chat_model: str = "gpt-4o",
     temperature: float = 0.7,
     language: str = "English",
     verbose: bool = False,
