@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Dict, List, Optional, cast
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, PageElement
 from langchain.callbacks.manager import (
     AsyncCallbackManagerForToolRun,
     CallbackManagerForToolRun,
@@ -115,7 +115,8 @@ class CustomHTTPGet(BaseTool):
         return wrapper
 
     def __get_text(self, html: str) -> str:
-        text = BeautifulSoup(html, "html.parser").find("body").get_text(separator="\n", strip=True)
+        body = cast(PageElement, BeautifulSoup(html, "html.parser").find("body"))
+        text = body.getText(separator="\n", strip=True)
         tokens = token.List.new(text, self.model_name)
         return tokens.read(n=self.max_tokens)
 
