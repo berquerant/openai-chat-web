@@ -9,7 +9,7 @@ pkommand = {git = "https://github.com/berquerant/pkommand.git", ref = "0.4.1"}
 wikipedia = "*"
 langchain-openai = "==0.3.7"
 langchain = "==0.3.19"
-langchain-community = "==0.3.17"
+langchain-community = "==0.3.18"
 tavily-python = "*"
 beautifulsoup4 = "*"
 tiktoken = "==0.9.0"
