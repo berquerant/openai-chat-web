@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "f841409c9149d33a1a2ea80a62f556d2f832e70474000f82349476cd8574f259"
+            "sha256": "1b61724e2dce3ff3e4372b7b752db13777e8365ee9f988ec93b8ade7dfabeb89"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -414,12 +414,12 @@
         },
         "duckduckgo-search": {
             "hashes": [
-                "sha256:6451aad95eb4ae773ec7626fc5d5cf3757361dc5f88ce55ba33499fa2714127e",
-                "sha256:ddd6da4625dbec5cb0796f9057e22b1e5bb2b8e93a9998fee20243dae9ab103b"
+                "sha256:54d18bfcda75c485232a868552bea1cc7c52d82472a73f0c7791613e98d32137",
+                "sha256:66edb228eed4a32d1f8437ce1d0ff9468f9eba6678c1685e7b43e80156cdc66e"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.9'",
-            "version": "==7.4.5"
+            "version": "==7.5.1"
         },
         "frozenlist": {
             "hashes": [
@@ -1239,6 +1239,21 @@
         "pkommand": {
             "git": "https://github.com/berquerant/pkommand.git",
             "ref": "16b6ef180e4d82f88889c0d59f0921693bd2b4d5"
+        },
+        "primp": {
+            "hashes": [
+                "sha256:11229e65aa5755fdfb535cc03fd64259a06764ad7c22e650fb3bea51400f1d09",
+                "sha256:31eecb5316f9bd732a7994530b85eb698bf6500d2f6c5c3382dac0353f77084e",
+                "sha256:3fb204f67a4b58dc53f3452143121317b474437812662ac0149d332a77ecbe1a",
+                "sha256:6549766ece3c7be19e1c16fa9029d3e50fa73628149d88601fcd964af8b44a8d",
+                "sha256:8f56ca2cd63f9ac75b33bf48129b7e79ade29cf280bc253b17b052afb27d2b9e",
+                "sha256:b0b21e6a599f580137774623009c7f895afab49d6c3d6c9a28344fd2586ebe8a",
+                "sha256:b6f23b2b694118a9d0443b3760698b90afb6f867f8447e71972530f48297992e",
+                "sha256:bd2dfb57feeba21a77a1128b6c6f17856605c4e73edcc05764fb134de4ff014f",
+                "sha256:d3ae1ba954ec8d07abb527ccce7bb36633525c86496950ba0178e44a0ea5c891"
+            ],
+            "markers": "python_version >= '3.8'",
+            "version": "==0.14.0"
         },
         "propcache": {
             "hashes": [
