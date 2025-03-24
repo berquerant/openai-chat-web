@@ -8,7 +8,7 @@ duckduckgo-search = "==7.5.2"
 pkommand = {git = "https://github.com/berquerant/pkommand.git", ref = "0.4.1"}
 wikipedia = "*"
 langchain-openai = "==0.3.8"
-langchain = "==0.3.20"
+langchain = "==0.3.21"
 langchain-community = "==0.3.19"
 tavily-python = "*"
 beautifulsoup4 = "*"
