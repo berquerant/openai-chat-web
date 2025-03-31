@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "2b09ae9f97c994d0baf29c82fccc65c333194ddb55960733b998f9657c7fc4b6"
+            "sha256": "aede3b46121f298fcbcf2d1bbc3b9da88c6227a7f767ac4327b831e8996fdab3"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -414,12 +414,12 @@
         },
         "duckduckgo-search": {
             "hashes": [
-                "sha256:71668990c5082839bd3dc5dbffc37ae451cbf15dfae9a379e77b237999a5dcc8",
-                "sha256:92962c139317e71278aa67fed8d3f2bb5b2dcc8f659904e0cb0c224da901519c"
+                "sha256:44ef03bfa5484bada786590f2d4c213251131765721383a177a0da6fa5c5e41a",
+                "sha256:c71a0661aa436f215d9a05d653af424affb58825ab3e79f3b788053cbdee9ebc"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.9'",
-            "version": "==7.5.2"
+            "version": "==7.5.5"
         },
         "frozenlist": {
             "hashes": [
