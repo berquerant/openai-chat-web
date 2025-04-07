@@ -1736,12 +1736,12 @@
         },
         "tavily-python": {
             "hashes": [
-                "sha256:cbf82f6b208807d25ef9ff21ab73a86a4b1013c6d5ed22a28816707a9d2e48d6",
-                "sha256:f001b55035924ec6684713114ab8733383450e38b0f5d99f27e14e7e7535a547"
+                "sha256:47f8c0b41283d44849fe9531596cd26d3de42a59618ef66f9e1244d8fedba404",
+                "sha256:fdad5303f9f6603a06fddcc7e21b128bebc1adf7694e553a664caf87eb2d2d9d"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.6'",
-            "version": "==0.5.3"
+            "version": "==0.5.4"
         },
         "tenacity": {
             "hashes": [
@@ -1799,11 +1799,11 @@
         },
         "typing-extensions": {
             "hashes": [
-                "sha256:0a4ac55a5820789d87e297727d229866c9650f6521b64206413c4fbada24d95b",
-                "sha256:c8dd92cc0d6425a97c18fbb9d1954e5ff92c1ca881a309c45f06ebc0b79058e5"
+                "sha256:4b6cf02909eb5495cfbc3f6e8fd49217e6cc7944e145cdda8caa3734777f9e69",
+                "sha256:98795af00fb9640edec5b8e31fc647597b4691f099ad75f469a2616be1a76dff"
             ],
             "markers": "python_version >= '3.8'",
-            "version": "==4.13.0"
+            "version": "==4.13.1"
         },
         "typing-inspect": {
             "hashes": [
